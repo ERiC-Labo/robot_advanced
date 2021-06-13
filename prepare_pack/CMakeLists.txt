@@ -12,8 +12,9 @@ find_package(catkin REQUIRED
     message_filters
     cv_bridge
     image_transport
+    tf2_ros
 )
-
+find_package(OpenCV REQUIRED)
 # add_message_files(
 #   FILES
 #   Message1.msg
@@ -43,7 +44,7 @@ find_package(catkin REQUIRED
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES prepare_pack
-  CATKIN_DEPENDS roscpp cv_bridge message_filters image_transport
+  CATKIN_DEPENDS roscpp cv_bridge message_filters image_transport tf2_ros
 #  DEPENDS system_lib
 )
 
@@ -56,6 +57,7 @@ catkin_package(
 include_directories(
  include
  ${catkin_INCLUDE_DIRS}
+ ${OpenCV_INCLUDE_DIRS}
 )
 
 
@@ -118,4 +120,27 @@ include_directories(
 add_executable(camera_and_image src/camera_and_image.cpp src/camera_and_image_node.cpp)
 target_link_libraries(camera_and_image
     ${catkin_LIBRARIES}
+    ${OpenCV_LIBRARIES}
+)
+
+add_executable(camera_main src/camera_main.cpp)
+target_link_libraries(camera_main
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+add_executable(cam_im_one_message src/cam_im_one_message.cpp)
+target_link_libraries(cam_im_one_message
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+)
+
+add_executable(broadcast_tf src/broadcast_tf_node.cpp src/broadcast_tf.cpp)
+target_link_libraries(broadcast_tf
+  ${catkin_LIBRARIES}
+)
+
+add_executable(listener_tf src/lister_tf.cpp src/lister_tf_node.cpp)
+target_link_libraries(listener_tf
+  ${catkin_LIBRARIES}
 )

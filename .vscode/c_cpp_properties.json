@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/ericlab/ros_package/tsuchida_ws/devel/include/**",
+                "/home/ericlab/ros_ws/devel/include/**",
+                "/home/ericlab/ros_package/ur_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/depends/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/initial_moveit/include/**",
+                "/home/ericlab/ros_ws/src/graduation_paper/depends_package/moveit_jog_arm/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/prepare_pack/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_2f_gripper_action_server/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_2f_gripper_control/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_3f_gripper_control/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_ethercat/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/robotiq/robotiq_ft_sensor/include/**",
+                "/home/ericlab/ros_package/ur_ws/src/simulate_camera/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/depends/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/depends/Universal_Robots_ROS_Driver/ur_controllers/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/depends/fmauch_universal_robot/ur_kinematics/include/**",
+                "/home/ericlab/ros_package/tsuchida_ws/src/robot_advanced/depends/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+                "/home/ericlab/ros_ws/src/graduation_paper/depends_package/vision_visp/visp_bridge/include/**",
+                "/home/ericlab/ros_ws/src/graduation_paper/visual_servo_tsuchida/include/**",
+                "/usr/include/**",
+                "/opt/ros/melodic/include",
+                "${workspaceFolder}/prepare_pack/include"
+            ],
+            "name": "ROS"
+        }
+    ],
+    "version": 4
+}

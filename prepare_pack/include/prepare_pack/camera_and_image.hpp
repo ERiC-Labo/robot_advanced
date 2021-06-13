@@ -5,7 +5,7 @@
 #include <message_filters/sync_policies/approximate_time.h>
 #include <sensor_msgs/CameraInfo.h>
 #include <sensor_msgs/Image.h>
-#include <opencv4/opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <image_transport/image_transport.h>
 
@@ -18,8 +18,7 @@ public:
     void operate();
     void callback(sensor_msgs::CameraInfoConstPtr, sensor_msgs::ImageConstPtr);
 private:
-    image_transport::Publisher gray_pub_;
-    image_transport::ImageTransport *it_;
+    ros::Publisher gray_pub_;
     ros::NodeHandle nh_;
     ros::NodeHandle *pnh_;
     std::string output_topic_name_, camera_topic_name_, image_topic_name_;

@@ -3,7 +3,6 @@
 camera_and_image::camera_and_image()
 {
     pnh_ = new ros::NodeHandle("~");
-    it_ = new image_transport::ImageTransport(nh_);
     parameter_set();
     operate();
 }
@@ -17,7 +16,7 @@ void camera_and_image::parameter_set()
 
 void camera_and_image::operate()
 {
-    gray_pub_ = it_->advertise(output_topic_name_, 10);
+    gray_pub_ =nh_.advertise<sensor_msgs::Image>(output_topic_name_, 10);
     camera_sub_ = new message_filters::Subscriber<sensor_msgs::CameraInfo>(nh_, camera_topic_name_, 10);
     image_sub_ = new message_filters::Subscriber<sensor_msgs::Image>(nh_, image_topic_name_, 10);
     sensor_sync_ = new message_filters::Synchronizer<Sync_type>(Sync_type(10), *camera_sub_, *image_sub_);
